@@ -1,0 +1,25 @@
+<div class="create-new-contact">
+    <form #contactForm="ngForm" class="example-form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Full Name:</mat-label>
+            <input matInput placeholder="Enter Full Name" name="name" required [(ngModel)]="contact.name"
+                value="name" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email:</mat-label>
+            <input matInput placeholder="Enter Email Address" name="email" required [(ngModel)]="contact.email"
+                value="email" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Full Name:</mat-label>
+            <input matInput placeholder="Enter Phone Number" name="phoneNumber" required
+                [(ngModel)]="contact.phoneNumber" value="phoneNumber" />
+        </mat-form-field>
+        <div class="button-container">
+            <div class="centered-button">
+                <button mat-raised-button color="primary" type="submit">Submit</button>
+                <button mat-raised-button color="secondary" type="button" routerLink="/contacts">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

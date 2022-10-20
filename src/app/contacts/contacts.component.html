@@ -1,0 +1,16 @@
+<div class="contacts-list">
+    <div class="contacts-list-heading">
+        <h1 class="center-align-text"> List Of Contacts</h1>
+        <button class="create-contact-btn" type="button" mat-raised-button color="primary" routerLink="/contacts/new">Create New Contact</button>
+    </div>
+    <div class="contacts">
+        <div class="contact" *ngFor="let contact of contacts">
+            <h2>
+                {{contact.name}} 
+                <mat-icon  class="icon" (click)="deleteContact(contact)">delete</mat-icon>
+            </h2>
+            <div>{{contact.email}}</div>
+            <div>{{contact.phoneNumber}}</div>
+        </div>
+    </div>
+</div>
